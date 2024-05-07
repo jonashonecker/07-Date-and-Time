@@ -37,9 +37,9 @@ public class TimeExperiments {
     }
 
     public static LocalDate getRandomDate() {
-        int minDay = (int) LocalDate.of(1, 1, 1).toEpochDay();
-        int maxDay = (int) LocalDate.of(2020, 1, 1).toEpochDay();
-        long randomDay = ThreadLocalRandom.current().nextInt(minDay, maxDay);
+        long minDay = LocalDate.of(1, 1, 1).toEpochDay();
+        long maxDay = LocalDate.of(2020, 1, 1).toEpochDay();
+        long randomDay = ThreadLocalRandom.current().nextLong(minDay, maxDay);
 
         return LocalDate.ofEpochDay(randomDay);
     }
